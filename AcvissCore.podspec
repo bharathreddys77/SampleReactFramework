@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/AcvissHQ'
   s.license          = { :type => "GNU AGPLv3", :file => "LICENSE" }
   s.author           = { 'gaurav' => 'gaurav@acviss.com' }
-  s.source           = { :git => 'https://github.com/sreedeeppaul/coresource.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/bharathreddys77/SampleReactFramework.git', :tag => s.version.to_s }
 
   s.exclude_files    = "Classes/Exclude"
   s.frameworks       = 'UIKit', 'AVFoundation'

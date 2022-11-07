@@ -1,0 +1,11 @@
+framework module AcvissCore {
+  umbrella header "AcvissCore.h"
+
+  export *
+  module * { export * }
+}
+
+module AcvissCore.Swift {
+    header "AcvissCore-Swift.h"
+    requires objc
+}

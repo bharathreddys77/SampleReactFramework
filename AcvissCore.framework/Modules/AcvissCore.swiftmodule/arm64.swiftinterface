@@ -1,0 +1,95 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name AcvissCore
+import AWSS3
+@_exported import AcvissCore
+import Swift
+import UIKit
+import _Concurrency
+@_hasMissingDesignatedInitializers public class AcvissCore {
+  public struct User {
+    public let linkedId: Swift.String?
+    public let token: Swift.String?
+    public let mobile: Swift.String?
+    public let countryCode: Swift.String?
+    public let fullName: Swift.String?
+    public let email: Swift.String?
+    public init(linkedId: Swift.String?, token: Swift.String?, mobile: (countryCode: Swift.String, number: Swift.String)?, fullName: Swift.String?, email: Swift.String?)
+  }
+  public struct ColorPalette {
+    public let primary: UIKit.UIColor
+    public let secondary: UIKit.UIColor
+    public let tertiary: UIKit.UIColor
+    public init()
+    public init(primary: UIKit.UIColor, secondary: UIKit.UIColor, tertiary: UIKit.UIColor)
+  }
+  public enum Environment : Swift.String {
+    case Production, Test
+    public func isProduction() -> Swift.Bool
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PresentationStyle {
+    case Present, Show
+    public static func == (a: AcvissCore.AcvissCore.PresentationStyle, b: AcvissCore.AcvissCore.PresentationStyle) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_hasMissingDesignatedInitializers public class Localization {
+    public static let shared: AcvissCore.AcvissCore.Localization
+    public var selectedLanguage: AcvissCore.AcvissCore.Languages
+    public func sync()
+    public func getValue(for text: Swift.String) -> Swift.String
+    public func getValue(for text: Swift.String, with language: AcvissCore.AcvissCore.Languages) -> Swift.String
+    @objc deinit
+  }
+  public enum Languages : Swift.String, Swift.CaseIterable {
+    case English, Hindi, Kannada, Tamil, Malayalam, Telugu, Marathi, Arabic
+    public enum Availability {
+      case Complete, Partial
+      public static func == (a: AcvissCore.AcvissCore.Languages.Availability, b: AcvissCore.AcvissCore.Languages.Availability) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public func status() -> AcvissCore.AcvissCore.Languages.Availability
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [AcvissCore.AcvissCore.Languages]
+    public typealias RawValue = Swift.String
+    public static var allCases: [AcvissCore.AcvissCore.Languages] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum LoyaltyRegistrationStatus : Swift.Int, Swift.Codable {
+    case Pending, Joined, NotApproved, Banned, NotJoined
+    public func getImage() -> UIKit.UIImage?
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+extension AcvissCore.AcvissCore.Environment : Swift.Equatable {}
+extension AcvissCore.AcvissCore.Environment : Swift.Hashable {}
+extension AcvissCore.AcvissCore.Environment : Swift.RawRepresentable {}
+extension AcvissCore.AcvissCore.PresentationStyle : Swift.Equatable {}
+extension AcvissCore.AcvissCore.PresentationStyle : Swift.Hashable {}
+extension AcvissCore.AcvissCore.Languages : Swift.Equatable {}
+extension AcvissCore.AcvissCore.Languages : Swift.Hashable {}
+extension AcvissCore.AcvissCore.Languages : Swift.RawRepresentable {}
+extension AcvissCore.AcvissCore.Languages.Availability : Swift.Equatable {}
+extension AcvissCore.AcvissCore.Languages.Availability : Swift.Hashable {}
+extension AcvissCore.AcvissCore.LoyaltyRegistrationStatus : Swift.Equatable {}
+extension AcvissCore.AcvissCore.LoyaltyRegistrationStatus : Swift.Hashable {}
+extension AcvissCore.AcvissCore.LoyaltyRegistrationStatus : Swift.RawRepresentable {}
